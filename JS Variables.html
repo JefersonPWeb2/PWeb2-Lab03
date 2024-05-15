@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Variables(Ejercios 1 - 5)</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id = "demo1"></p>
+    <p id = "demo2"></p>
+    <p id = "demo3"></p>
+    <p id = "demo4"></p>
+    <script>
+        //Ejercicio 1 
+        //Cree una variable llamada carName y asígnele el valor Volvo.
+        let carName = "Volvo";
+        document.getElementById("demo").innerHTML = "Ejercicio 1:<br>Cree una variable llamada carNamey asígnele el valor Volvo <br>"+carName;
+        //Ejercicio 2
+        //Cree una variable llamada xy asígnele el valor 50.
+        let x = 50;
+        document.getElementById("demo1").innerHTML = "Ejercicio 2:<br>Cree una variable llamada xy asígnele el valor 50<br>"+x;
+        //Ejercicio 3
+        //Muestra la suma de 5 + 10, usando dos variables: 'x' y 'y'.
+        x = 5;
+        let y = 10;
+        document.getElementById("demo2").innerHTML = "Ejercicio 3:<br>Muestra la suma de 5 + 10, usando dos variables: 'x' y 'y'.<br>La respuesta de 5 + 10 es: "+(x+y);
+        //Ejercicio 4
+        //Cree una variable llamada 'z', asígnele 'x + y' y muestre el resultado en un cuadro de alerta.
+        x = 5;
+        y = 10;
+        let z = x + y;
+        document.getElementById("demo3").innerHTML = "Ejercicio 4:<br>Cree una variable llamada 'z', asígnele 'x + y' y muestre el resultado en un cuadro de alerta.<br>"+z;
+        alert(z);
+        //Ejercicio 5
+        //En una sola línea, declara tres variables con los siguientes nombres y valores:
+        //firstName = "John"
+        //lastName = "Doe"
+        //age = 35
+        let firstName = "John", lastName = "Doe", age = 35;
+        document.getElementById("demo4").innerHTML = "Ejercicio 5:<br>En una sola línea, declara tres variables con los siguientes nombres y valores:<br> firstName = 'John'<br>lastName = 'Doe'<br>age = 35<br>-----------<br>"+firstName+"<br>"+lastName+"<br>"+age;
+    </script>
+</body>
+</html>
