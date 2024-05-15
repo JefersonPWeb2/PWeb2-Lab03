@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Operators (Ejercicios 6 - 10)</title>
+    </head> 
+    <body>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <script>
+            //Ejercicio 6:
+            //Multiplica 10por 5y alerta el resultado:
+            document.getElementById("demo").innerHTML = "Ejercicio 6:<br>Multiplica 10 por 5 y alerta el resultado:<br>alert(10*5)";
+            alert(10*5);
+            //Ejercicio 7:
+            //Divide 10 por 2 y alerta el resultado:
+            document.getElementById("demo2").innerHTML = "Ejercicio 7:<br>Divide 10 por 2 y alerta el resultado:<br>alert(10/2)";
+            alert(10/2);
+            //Ejercicio 8:
+            //Alerta al resto cuando 15 se divide por 9.
+            document.getElementById("demo3").innerHTML = "Ejercicio 8:<br>Alerta al resto cuando 15 se divide por 9.<br>alert(15%9)";
+            alert(15%9);
+            //Ejercicio 9:
+            //Utilice el operador de asignación correcto que dará como resultado x ser 15(igual que x = x + y).
+            x = 10;
+            y = 5;
+            document.getElementById("demo4").innerHTML = "Ejercicio 9:<br>Utilice el operador de asignación correcto que dará como resultado x ser 15(igual que x = x + y).<br>x = 10;<br>y = 5;<br>x+=y;<br>"+(x+=y);
+            //Ejercicio 10:
+            //Utilice el operador de asignación correcto que dará como resultado xser 50(igual que x = x * y).
+            x = 10;
+            y = 5;
+            document.getElementById("demo5").innerHTML = "Ejercicio 10:<br>Utilice el operador de asignación correcto que dará como resultado x ser 50(igual que x = x * y).<br>"+(x*=y);
+        </script>
+    </body>
+</html>
