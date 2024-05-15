@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Functions</title>
+    </head>
+    <body>
+        <p id = "demo"></p>
+        <p id = "demo2"></p>
+        <script>
+            //Ejercicio 12:
+            //Ejecute la función denominada myFunction.
+            function myFunction() {
+                alert("Hello World!");
+            }
+            myFunction();
+            //Ejercicio 13:
+            //Crea una función llamada "myFunction".
+            function myFunction(){
+                alert("Hello World!");
+            }
+            //Ejercicio 14:
+            //Haga que la función devuelva "Hello".
+            function myFunction(){
+                return "Hello";
+            }
+            document.getElementById("demo").innerHTML = myFunction();
+            //Ejercicio 15:
+            //Haga que la función muestre "Hello" en el HTML interno de un elemento con el ID "demo".
+            function myFunction(){
+                document.getElementById("demo2").innerHTML = "Hello";
+            }
+        </script>
+    </body>
+</html>
