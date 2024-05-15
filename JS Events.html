@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Events</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <!-- Ejercicio 19: The <button> element should do something when someone clicks on it. Try to fix it!-->
+        <button onclick="alert('Hello')">Click me.</button>
+
+        <!-- Ejercicio 20: When the button is clicked, the function "myFunction" should be executed.-->
+        <button onclick="myFunction()">Click me.</button>
+        <!-- Ejercicio 21: The <div> element should turn red when someone moves the mouse over it.-->
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Hello";
+            }
+        </script>
+    </body>
+</html>
