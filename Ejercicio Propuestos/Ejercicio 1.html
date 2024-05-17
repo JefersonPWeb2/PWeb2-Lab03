@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h1>Obtener Nombre del Día de la Semana</h1>
+    <p>Ingrese un número del 0 al 6 para obtener un día de la semana:</p>
+    <input type="number" id="inputNumeroDia" min="0" max="6">
+    <button onclick="obtenerNombreDia()">Obtener Nombre del Día</button>
+    <p id="resultado"></p>
+    <script>
+        function obtenerNombreDia() {
+            let numeroDia = parseInt(document.getElementById('inputNumeroDia').value);
+            let nombresDias = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+            if (numeroDia >= 0 && numeroDia <= 6) {
+                let nombreDia = nombresDias[numeroDia];
+                document.getElementById('resultado').textContent = `El día correspondiente al número ${numeroDia} es ${nombreDia}.`;
+            } else {
+                document.getElementById('resultado').textContent = 'Por favor, introduce un número del 0 al 6.';
+            }
+        }
+    </script>
+</body>
+</html>
