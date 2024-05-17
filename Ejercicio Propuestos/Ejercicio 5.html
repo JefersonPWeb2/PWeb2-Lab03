@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Suma de Valores</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Suma de Valores</h1>
+
+    <form id="formulario">
+        <label for="cantidadValores">Ingrese la cantidad de valores:</label>
+        <input type="number" id="cantidadValores" min="1" required>
+        <button type="submit">Generar Tabla</button>
+    </form>
+
+    <div id="tablaContainer"></div>
+    <button id="calcularSuma" style="display: none;">Calcular Suma</button>
+    <p id="resultadoSuma"></p>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const cantidadValores = parseInt(document.getElementById('cantidadValores').value);
+            const tablaContainer = document.getElementById('tablaContainer');
+            tablaContainer.innerHTML = '';
+
+            const table = document.createElement('table');
+            const tbody = document.createElement('tbody');
+
+            for (let i = 0; i < cantidadValores; i++) {
+                const randomValue = Math.floor(Math.random() * 100) + 1;
+                const row = document.createElement('tr');
+                const cellIndex = document.createElement('td');
+                const cellValue = document.createElement('td');
+                cellIndex.textContent = i + 1;
+                cellValue.textContent = randomValue;
+
+                row.appendChild(cellIndex);
+                row.appendChild(cellValue);
+                tbody.appendChild(row);
+            }
+
+            table.appendChild(tbody);
+            tablaContainer.appendChild(table);
+
+            document.getElementById('calcularSuma').style.display = 'block';
+        });
+
+        document.getElementById('calcularSuma').addEventListener('click', function() {
+            const valores = document.querySelectorAll('#tablaContainer table tbody td:nth-child(2)');
+            let suma = 0;
+            valores.forEach(valor => {
+                suma += parseInt(valor.textContent);
+            });
+            document.getElementById('resultadoSuma').textContent = `La suma de los valores es: ${suma}`;
+        });
+    </script>
+</body>
+</html>
